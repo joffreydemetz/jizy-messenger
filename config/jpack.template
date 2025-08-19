@@ -1,0 +1,3 @@
+import jMessenger from '{{PREFIX}}lib/js/messenger.js';
+
+export default jMessenger;

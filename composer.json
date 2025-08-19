@@ -1,0 +1,20 @@
+{
+    "name": "jdz/jizy-messenger",
+    "type": "library",
+    "description": "A simple JS DOM messaging library",
+    "keywords": [
+        "JDZ",
+        "DOM",
+        "Messaging"
+    ],
+    "homepage": "https://jdz.joffreydemetz.com/jmessenger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joffrey Demetz",
+            "email": "joffrey.demetz@gmail.com",
+            "homepage": "https://joffreydemetz.com",
+            "role": "Lead"
+        }
+    ]
+}
