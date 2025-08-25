@@ -28,6 +28,6 @@
   "license": "MIT",
   "description": "A simple JS DOM messaging library.",
   "dependencies": {
-    "jizy-packer": "^2.0.0"
+    "jizy-packer": "^2.1.0"
   }
 }
