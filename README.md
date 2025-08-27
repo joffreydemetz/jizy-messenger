@@ -2,7 +2,7 @@
 
 A simple JS DOM messaging library.
 
-```javascript
+```js
 import { jMessenger } from 'jizy-messenger';
 
 const messenger = new jMessenger();

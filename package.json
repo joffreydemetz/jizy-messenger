@@ -1,13 +1,13 @@
 {
   "name": "jizy-messenger",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "browser": "dist/js/jizy-messenger.min.js",
   "main": "lib/index.js",
   "type": "module",
+  "jizy": "dist/",
   "files": [
-    "dist/js/jizy-messenger.min.js",
-    "lib/js/messenger.js",
-    "lib/index.js"
+    "dist/*",
+    "lib/*"
   ],
   "scripts": {
     "jpack:export": "node ./cli/jpack.js --action build --name perso",
