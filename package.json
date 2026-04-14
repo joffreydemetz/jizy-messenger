@@ -1,6 +1,6 @@
 {
   "name": "jizy-messenger",
-  "version": "2.1.1",
+  "version": "2.1.5",
   "browser": "dist/js/jizy-messenger.min.js",
   "main": "lib/index.js",
   "type": "module",
@@ -27,7 +27,7 @@
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
   "description": "A simple JS DOM messaging library.",
-  "dependencies": {
-    "jizy-packer": "^2.1.0"
+  "devDependencies": {
+    "jizy-packer": "^2.1.44"
   }
 }
