@@ -1,6 +1,6 @@
 {
   "name": "jizy-messenger",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "browser": "dist/js/jizy-messenger.min.js",
   "main": "lib/index.js",
   "type": "module",
