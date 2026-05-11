@@ -1,3 +1,5 @@
 import jMessenger from '{{PREFIX}}lib/js/messenger.js';
 
+import '{{PREFIX}}lib/index.less';
+
 export default jMessenger;

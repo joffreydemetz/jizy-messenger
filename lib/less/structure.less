@@ -1,0 +1,89 @@
+.app-messages {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2147483;
+	justify-content: center;
+	flex-direction: column;
+
+	&.backgrounded {
+		background-color: @messenger-backdrop-color;
+		height: 100vh;
+		margin: 0;
+		padding-top: 20px;
+		top: 0 !important;
+	}
+
+	&:empty {
+		display: none;
+	}
+}
+
+.alert {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	max-width: 600px;
+	color: @messenger-fg-color;
+	border: none;
+	margin: 0 auto;
+	font-size: 1.1em;
+	padding-left: 15px;
+	padding-right: 15px;
+	user-select: none;
+
+	a {
+		font-weight: 700;
+		color: inherit !important;
+	}
+
+	p,
+	ul {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	> div {
+		flex-grow: 1;
+	}
+
+	&.alert-success {
+		background-color: @messenger-success-bg-color;
+	}
+
+	&.alert-info {
+		background-color: @messenger-info-bg-color;
+	}
+
+	&.alert-primary {
+		background-color: @messenger-primary-bg-color;
+	}
+
+	&.alert-warning {
+		background-color: @messenger-warning-bg-color;
+	}
+
+	&.alert-danger {
+		background-color: @messenger-danger-bg-color;
+	}
+
+	& + .alert {
+		margin-top: 6px;
+	}
+
+	&.alert-dismissible {
+		position: relative;
+
+		> div {
+			max-width: 90%;
+		}
+	}
+
+	.closer {
+		font-size: 30px;
+		line-height: 30px;
+		text-shadow: none;
+	}
+}

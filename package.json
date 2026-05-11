@@ -37,6 +37,7 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^30.3.0",
-    "jizy-packer": "^2.1.44"
+    "jizy-packer": "^2.1.44",
+    "less": "^4.4.1"
   }
 }
