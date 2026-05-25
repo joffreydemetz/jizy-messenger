@@ -6,9 +6,10 @@
 	z-index: 2147483;
 	justify-content: center;
 	flex-direction: column;
+	container-type: inline-size;
 
 	&.backgrounded {
-		background-color: @messenger-backdrop-color;
+		background-color: var(--jizy-messenger-backdrop-color);
 		height: 100vh;
 		margin: 0;
 		padding-top: 20px;
@@ -25,7 +26,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	max-width: 600px;
-	color: @messenger-fg-color;
+	color: var(--jizy-messenger-fg-color);
 	border: none;
 	margin: 0 auto;
 	font-size: 1.1em;
@@ -50,23 +51,23 @@
 	}
 
 	&.alert-success {
-		background-color: @messenger-success-bg-color;
+		background-color: var(--jizy-messenger-success-bg-color);
 	}
 
 	&.alert-info {
-		background-color: @messenger-info-bg-color;
+		background-color: var(--jizy-messenger-info-bg-color);
 	}
 
 	&.alert-primary {
-		background-color: @messenger-primary-bg-color;
+		background-color: var(--jizy-messenger-primary-bg-color);
 	}
 
 	&.alert-warning {
-		background-color: @messenger-warning-bg-color;
+		background-color: var(--jizy-messenger-warning-bg-color);
 	}
 
 	&.alert-danger {
-		background-color: @messenger-danger-bg-color;
+		background-color: var(--jizy-messenger-danger-bg-color);
 	}
 
 	& + .alert {
