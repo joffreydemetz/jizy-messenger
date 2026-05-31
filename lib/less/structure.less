@@ -25,13 +25,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	max-width: 600px;
+	max-width: 100%;
 	color: var(--jizy-messenger-fg-color);
 	border: none;
 	margin: 0 auto;
 	font-size: 1.1em;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 12px;
+	padding-right: 12px;
 	user-select: none;
 
 	a {
@@ -46,7 +46,7 @@
 		}
 	}
 
-	> div {
+	>div {
 		flex-grow: 1;
 	}
 
@@ -70,15 +70,16 @@
 		background-color: var(--jizy-messenger-danger-bg-color);
 	}
 
-	& + .alert {
+	&+.alert {
 		margin-top: 6px;
 	}
 
 	&.alert-dismissible {
 		position: relative;
 
-		> div {
-			max-width: 90%;
+		.closer {
+			width: 30px;
+			height: 30px;
 		}
 	}
 
@@ -93,8 +94,8 @@
 		padding: 0;
 		margin: 0;
 		font: inherit;
-		font-size: 30px;
-		line-height: 30px;
+		font-size: 1.8rem;
+		line-height: 1;
 		text-shadow: none;
 		color: var(--jizy-messenger-closer-color);
 		cursor: pointer;
