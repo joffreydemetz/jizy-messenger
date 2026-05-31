@@ -82,9 +82,21 @@
 		}
 	}
 
+	// Reset the host page's / UA button chrome — the closer is just the glyph.
+	// Only its colour is themeable (via --jizy-messenger-closer-color).
 	.closer {
+		appearance: none;
+		-webkit-appearance: none;
+		background: none;
+		border: 0;
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+		font: inherit;
 		font-size: 30px;
 		line-height: 30px;
 		text-shadow: none;
+		color: var(--jizy-messenger-closer-color);
+		cursor: pointer;
 	}
 }
