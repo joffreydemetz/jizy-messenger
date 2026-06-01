@@ -1,10 +1,18 @@
 {
   "name": "jizy-messenger",
-  "version": "2.1.15",
+  "version": "2.2.1",
   "browser": "dist/js/jizy-messenger.min.js",
   "main": "lib/index.js",
   "type": "module",
-  "jizy": "dist/",
+  "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
+  "license": "MIT",
+  "description": "A simple JS DOM messaging library.",
+  "homepage": "https://jizy.joffreydemetz.com/messenger",
+  "keywords": [
+    "jizy",
+    "DOM",
+    "messaging"
+  ],
   "files": [
     "dist/*",
     "lib/*"
@@ -25,15 +33,6 @@
     "type": "git",
     "url": "git+https://github.com/joffreydemetz/jizy-messenger.git"
   },
-  "keywords": [
-    "jizy",
-    "DOM",
-    "messaging"
-  ],
-  "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
-  "license": "MIT",
-  "description": "A simple JS DOM messaging library.",
-  "homepage": "https://jizy.joffreydemetz.com/messenger",
   "devDependencies": {
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^30.3.0",

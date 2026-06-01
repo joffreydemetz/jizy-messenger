@@ -3,7 +3,7 @@
 A simple JS DOM messaging library.
 
 ```js
-import { jMessenger } from 'jizy-messenger';
+import jMessenger from 'jizy-messenger';
 
 const messenger = new jMessenger();
 messenger.add('Hello World!', 'message', { timeout: 5 });
