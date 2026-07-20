@@ -129,6 +129,37 @@ describe('ready()', () => {
         expect(existing.contains(alert)).toBe(false);
     });
 
+    test('clicking a parsed .closer removes an alert without data-timeout', () => {
+        const existing = document.createElement('div');
+        existing.setAttribute('data-jizy-messaging', '');
+
+        const alert = document.createElement('div');
+        alert.classList.add('alert');
+        const closer = document.createElement('button');
+        closer.classList.add('closer');
+        alert.appendChild(closer);
+        existing.appendChild(alert);
+        document.body.appendChild(existing);
+
+        messenger.ready();
+        closer.click();
+
+        expect(existing.contains(alert)).toBe(false);
+    });
+
+    test('parses an alert with neither data-timeout nor a .closer without throwing', () => {
+        const existing = document.createElement('div');
+        existing.setAttribute('data-jizy-messaging', '');
+
+        const alert = document.createElement('div');
+        alert.classList.add('alert');
+        existing.appendChild(alert);
+        document.body.appendChild(existing);
+
+        expect(() => messenger.ready()).not.toThrow();
+        expect(alert.dataset.i).toBeDefined();
+    });
+
     test('clicking a parsed .closer removes its alert', () => {
         const existing = document.createElement('div');
         existing.setAttribute('data-jizy-messaging', '');
@@ -175,14 +206,17 @@ describe('add()', () => {
         expect(alert.classList.contains('alert-danger')).toBe(true);
     });
 
-    test('message/info/warning/default type maps to alert-success', () => {
+    test('each type maps to its own alert style, message/default to alert-success', () => {
         messenger.add('m', 'message');
         messenger.add('i', 'info');
         messenger.add('w', 'warning');
         messenger.add('d');
         const alerts = messenger.$container.querySelectorAll('.alert');
         expect(alerts.length).toBe(4);
-        alerts.forEach((a) => expect(a.classList.contains('alert-success')).toBe(true));
+        expect(alerts[0].classList.contains('alert-success')).toBe(true);
+        expect(alerts[1].classList.contains('alert-info')).toBe(true);
+        expect(alerts[2].classList.contains('alert-warning')).toBe(true);
+        expect(alerts[3].classList.contains('alert-success')).toBe(true);
     });
 
     test('shows the container (display:block) and applies seethrough/backgrounded', () => {
