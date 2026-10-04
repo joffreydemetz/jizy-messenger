@@ -348,3 +348,34 @@ describe('check()', () => {
         expect(messenger.$container.style.display).toBe('block');
     });
 });
+
+describe('close label', () => {
+    test('a throwing translator still renders the message with "Close"', () => {
+        window.JiZy = { translate: () => { throw new TypeError("Cannot read properties of undefined (reading 'get')"); } };
+        messenger.ready();
+
+        messenger.add('Saved', 'message');
+
+        const alert = document.querySelector('[data-jizy-messaging] .alert');
+        expect(alert).not.toBeNull();
+        expect(alert.querySelector('.sr-only').textContent).toBe('Close');
+    });
+
+    test('no JiZy at all falls back to "Close"', () => {
+        delete window.JiZy;
+        messenger.ready();
+
+        messenger.add('Saved', 'message');
+
+        expect(document.querySelector('.alert .sr-only').textContent).toBe('Close');
+    });
+
+    test('a translation is used when there is one', () => {
+        window.JiZy = { translate: (key, def) => (key === 'CLOSE' ? 'Fermer' : def) };
+        messenger.ready();
+
+        messenger.add('Saved', 'message');
+
+        expect(document.querySelector('.alert .sr-only').textContent).toBe('Fermer');
+    });
+});
